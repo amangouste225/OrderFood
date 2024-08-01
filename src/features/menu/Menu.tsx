@@ -5,7 +5,7 @@ import { TItemsProps } from "../../types";
 
 function Menu() {
   const menu = useLoaderData();
-  console.log(menu);
+
   return (
     <ul>
       {menu.map((item: TItemsProps) => (
