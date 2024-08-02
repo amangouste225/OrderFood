@@ -6,11 +6,14 @@ import CreateOrder from "./features/order/CreateOrder";
 import Order from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
+import Error from "./ui/Error";
+
 // import { loader as MenuLoader } from "./features/menu/menuLoader";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -20,8 +23,9 @@ const router = createBrowserRouter([
         path: "/menu",
         element: <Menu />,
         loader: async () => {
-          return fetch("https://api.escuelajs.co/api/v1/products");
+          return fetch("https://rrrrrrrrrrrrapi.escuelajs.co/api/v1/products");
         },
+        errorElement: <Error />,
       },
       {
         path: "/cart",

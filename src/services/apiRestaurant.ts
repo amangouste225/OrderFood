@@ -1,5 +1,4 @@
-const API_URL = "https://api.escuelajs.co/api/v1";
-// const api = "https://react-fast-pizza-api.onrender.com";
+const API_URL = "https://rrrrrrrrrrrrrrrrapi.escuelajs.co/api/v1/";
 
 export async function getMenu() {
   const res = await fetch(`${API_URL}/products`);
