@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         path: "/menu",
         element: <Menu />,
         loader: async () => {
-          return fetch("https://rrrrrrrrrrrrapi.escuelajs.co/api/v1/products");
+          return fetch("https://api.escuelajs.co/api/v1/products");
         },
         errorElement: <Error />,
       },
