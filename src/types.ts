@@ -5,7 +5,13 @@ export type TItemsProps = {
   description: string;
   images: string[];
   updatedAt: string;
-  category: string[];
+  category: {
+    id: number;
+    name: string;
+    updatedAt: string;
+    creationAt: string;
+    image: string;
+  };
 };
 
 export type TItems = {

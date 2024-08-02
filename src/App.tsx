@@ -1,10 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./ui/Home";
-import Menu, { loader as MenuLoader } from "./features/menu/Menu";
+import Menu from "./features/menu/Menu";
 import Cart from "./features/cart/Cart";
 import CreateOrder from "./features/order/CreateOrder";
 import Order from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
+
+// import { loader as MenuLoader } from "./features/menu/menuLoader";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,9 @@ const router = createBrowserRouter([
       {
         path: "/menu",
         element: <Menu />,
-        loader: MenuLoader,
+        loader: async () => {
+          return fetch("https://api.escuelajs.co/api/v1/products");
+        },
       },
       {
         path: "/cart",

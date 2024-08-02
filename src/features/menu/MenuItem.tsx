@@ -1,9 +1,10 @@
+import { TItemsProps } from "../../types";
 import { formatCurrency } from "../../utils/helpers";
 
-function MenuItem({ item }) {
+function MenuItem({ item }: { item: TItemsProps }) {
   return (
     <li>
-      <img src={item.images[1]} alt={item.title} />
+      <img src={item.category.image} alt={item.title} />
       <div>
         <p>{item.title}</p>
         <p>{item.category.name}</p>
