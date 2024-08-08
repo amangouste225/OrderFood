@@ -3,7 +3,7 @@ import SearchOrder from "../features/order/SearchOrder";
 
 const Header = () => (
   <header className="flex">
-    <Link to="/">Pizza Order Co.</Link>
+    <Link to="/">Clothes de Baby</Link>
 
     <SearchOrder />
   </header>
